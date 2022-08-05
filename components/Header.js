@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from "react-native"
-import Color from "../constants/colors"
+import { COLOR } from "../constants/colors"
 
 export default Header = (props) => {
     const { title } = props 
@@ -16,7 +16,7 @@ const style = StyleSheet.create({
         width: '100%',
         height: 90,
         paddingTop: 36,
-        backgroundColor: Color.primary,
+        backgroundColor: COLOR.primary,
         alignItems: 'center',
         justifyContent:'center'
     },

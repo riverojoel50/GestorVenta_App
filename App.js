@@ -2,7 +2,6 @@ import { Button, StyleSheet, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
 
-import Header from './components/Header';
 import Input from './components/Input';
 import ShopNavigator from './navigation/ShopNavigator';
 
