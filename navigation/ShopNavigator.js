@@ -9,6 +9,7 @@ import LoginScreen from "../screen/LoginScreen";
 import CategoryArticleScreen from "../screen/CategoryArticleScreen"
 import CategoriesScreen from "../screen/CategoriesScreen";
 import ArticleDetailScreen from "../screen/ArticleDetailScreen"
+import CartScreen from "../screen/CartScreen"
 
 const Stack = createNativeStackNavigator();
 
