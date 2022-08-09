@@ -15,7 +15,7 @@ const Stack = createNativeStackNavigator();
 
 export default ShopNavigator = () => {
     return (
-        <NavigationContainer>
+        
             <Stack.Navigator initialRouteName="Categories"
                 screenOptions={{
                     headerStyle: {
@@ -39,6 +39,6 @@ export default ShopNavigator = () => {
                         title: route.params.article.name,
                     })}/>
             </Stack.Navigator>
-        </NavigationContainer>
+    
     )
 };

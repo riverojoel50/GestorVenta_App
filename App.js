@@ -3,7 +3,7 @@ import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
 
 import Input from './components/Input';
-import ShopNavigator from './navigation/ShopNavigator';
+import MainNavigation from './navigation/MainNavigation';
 
 export default function App() {
   const [loaded] = useFonts({
@@ -13,7 +13,7 @@ export default function App() {
 
   if (!loaded) return <AppLoading/>
   return (
-     <ShopNavigator/>
+     <MainNavigation/>
   )
 }
 
