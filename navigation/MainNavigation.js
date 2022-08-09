@@ -8,6 +8,4 @@ export default MainNavigator = () => {
             <TabNavigator/>
         </NavigationContainer>
     )
-
-    //Eliminar  NavigationContainr de ShopNavigator, y actualizar el import en App.js
 }

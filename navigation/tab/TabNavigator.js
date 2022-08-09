@@ -1,41 +1,43 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import Ionicons from '@expo/vector-icons/Ionicons'
 
 import ShopNavigator from "../ShopNavigator";
 import CartNavigator from "../CartNavigator";
 
 const Bottomtabs = createBottomTabNavigator();
 
-const TabNavigator = () => {
-    <Bottomtabs.Navigator initialRouteName="Shop" screenOptions={{
-        headerShown: false,
-        tabBarShowLabel: false,
-        tabBarStyle: styles.tabBar
-    }}>
-        <Bottomtabs.Screen name="ShopTab" component={ShopNavigator}
-            options={{
-                tabBarIcon:({focused}) => (
-                    <View style={styles.item}>
-                        <Ionicons name="md-home" size={24} color="black"/>
-                        <Text>Tienda</Text>
-                    </View>
-                )
-            }}
-        />
-        <Bottomtabs.Screen name="CartTab" component={CartNavigator}
-            options={{
-                tabBarIcon:({focused}) => (
-                    <View style={styles.item}>
-                        <Ionicons name="md-cart" size={24} color="black"/>
-                        <Text>Tienda</Text>
-                    </View>
-                )
-            }}
-        />
-    </Bottomtabs.Navigator>
+export default TabNavigator = () => {
+    return (
+        <Bottomtabs.Navigator initialRouteName="Shop" screenOptions={{
+            headerShown: false,
+            tabBarShowLabel: false,
+            tabBarStyle: styles.tabBar
+        }}>
+            <Bottomtabs.Screen name="ShopTab" component={ShopNavigator}
+                options={{
+                    tabBarIcon:({focused}) => (
+                        <View style={styles.item}>
+                            <Ionicons name="md-home" size={24} color="black"/>
+                            <Text>Tienda</Text>
+                        </View>
+                    )
+                }}
+                />
+            <Bottomtabs.Screen name="CartTab" component={CartNavigator}
+                options={{
+                    tabBarIcon:({focused}) => (
+                        <View style={styles.item}>
+                            <Ionicons name="md-cart" size={24} color="black"/>
+                            <Text>Tienda</Text>
+                        </View>
+                    )
+                }}
+                />
+        </Bottomtabs.Navigator>
+        )
 }
-
 
 const styles = StyleSheet.create({
     tabBar:{
