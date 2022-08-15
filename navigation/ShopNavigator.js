@@ -30,7 +30,7 @@ export default ShopNavigator = () => {
                 <Stack.Screen name="Login" component={LoginScreen} options={{title: 'Login'}}/>            
                 <Stack.Screen name="Home" component={HomeScreen}/>
                 <Stack.Screen name="Categories" component={CategoriesScreen}/>
-                <Stack.Screen name="Articles" component={CategoryArticleScreen}
+                <Stack.Screen name="ArticleCategory" component={CategoryArticleScreen}
                     options={({route}) => ({ //recibe por parametro el titulo
                         title: route.params.name,
                     })}/>

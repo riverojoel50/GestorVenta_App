@@ -1,8 +1,9 @@
 import { Button, StyleSheet, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
+import { Provider } from 'react-redux';
 
-import Input from './components/Input';
+import store from './store'
 import MainNavigation from './navigation/MainNavigation';
 
 export default function App() {
@@ -12,8 +13,19 @@ export default function App() {
   })
 
   if (!loaded) return <AppLoading/>
+
+  // if (!loaded) {
+  //   return (
+  //     <AppLoading
+  //       startAsync={fetchFonts}
+  //       onFinish={() => setFontLoaded(true)}
+  //       onError = {console.warn}
+  //     />
+  //     )
+  // }
+
   return (
-     <MainNavigation/>
+    <Provider store={store}><MainNavigation/></Provider>
   )
 }
 
